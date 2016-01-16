@@ -6,8 +6,8 @@ int main()
 	// Initialize services
 	srvInit();
 	aptInit();
-	hidInit(NULL);
-	gfxInit();
+	hidInit();
+	gfxInitDefault();
 	//gfxSet3D(true); // uncomment if using stereoscopic 3D
 
 	// Main loop
