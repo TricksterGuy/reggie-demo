@@ -37,7 +37,11 @@ INCLUDES	:=	include
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
+<<<<<<< HEAD
 ARCH	:=	-march=armv6k -mtune=mpcore -mfloat-abi=hard -mtp=soft
+=======
+ARCH	:=	-march=armv6k -mtune=mpcore -mfloat-abi=hard
+>>>>>>> f9e7258a76d9a14f47a3406dbd3b16411b6bed8d
 
 CFLAGS	:=	-g -Wall -O2 -mword-relocations \
 			-fomit-frame-pointer -ffunction-sections \
