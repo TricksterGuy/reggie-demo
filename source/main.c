@@ -1,4 +1,5 @@
 #include <3ds.h>
+#include <string.h>
 #include "reggie.h"
 
 int main()
@@ -22,10 +23,13 @@ int main()
 		if (kDown & KEY_START)
 			break; // break in order to return to hbmenu
 
-		// Example rendering code that displays a white pixel
-		// Please note that the 3DS screens are sideways (thus 240x400 and 240x320)
+
 		u8* fb = gfxGetFramebuffer(GFX_TOP, GFX_LEFT, NULL, NULL);
 		memset(fb, 0, 240*400*3);
+
+		// Example rendering code that displays an image. 
+		// The image was converted to C using one of my own tools nin10kit.
+		// Image was exported to account for the 3ds's screen being rotated by 90 degrees.
 		const unsigned char* ptr = reggie;
 		for (int i = 0; i < 240*400; i++)
 		{
